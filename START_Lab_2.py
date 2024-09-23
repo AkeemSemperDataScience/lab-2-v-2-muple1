@@ -24,6 +24,8 @@ def lab2Question3(str1: str, str2: str) -> int:
     # Create a function that takes in two strings - str1 and str2
     # Return the number of times str2 appears in str1
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
+    str1 = str1.lower()
+    str2 = str2.lower()
     return str1.count(str2)
 
 def lab2Question4(list1, list2):
@@ -84,7 +86,7 @@ def test_lab2Question1():
 test_lab2Question1()
 
 print(lab2Question2(10))
-print(lab2Question3("coding is coold", "o"))
+print(lab2Question3("Superstitious and superfluous", "super"))
 print(lab2Question4([1,2,3],[4,5,6]))
 
 password_to_test = 'ABdC1234567'
