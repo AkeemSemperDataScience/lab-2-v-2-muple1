@@ -49,17 +49,14 @@ def lab2Question5():
     # *Note: This function should call another function, called isValidPassword(password), 
     # that takes in a password and returns True if the password is valid, False otherwise.
     # You will need to make that function, exactly as described above. 
-    password = None
+    
     while True:
         password = input("Enter a password: ")
         if isValidPassword(password):
             print("Password is valid.")
             return password
         else:
-            print("Invalid password. Please try again.")
-
-
-    return password
+            print("Invalid password.")
 
 def isValidPassword(password: str) -> bool:
     # Create a function that takes in a password and returns True if the password is valid, False otherwise
@@ -78,6 +75,8 @@ def isValidPassword(password: str) -> bool:
         return False
     return True
 
+
+
 ## test
 def test_lab2Question1():
     assert lab2Question1("purple") == False, "Test Case 1 Failed"
@@ -87,5 +86,8 @@ test_lab2Question1()
 print(lab2Question2(10))
 print(lab2Question3("coding is coold", "o"))
 print(lab2Question4([1,2,3],[4,5,6]))
-valid_password = lab2Question5()
-print("Valid password", valid_password)
+
+password_to_test = 'ABdC1234567'
+print(f"Is '{password_to_test}' a valid password? {isValidPassword(password_to_test)}")
+
+
